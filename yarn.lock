@@ -4266,10 +4266,10 @@ internal-ip@1.2.0:
   dependencies:
     meow "^3.3.0"
 
-intl-tel-input@12.1.15:
-  version "12.1.15"
-  resolved "https://registry.yarnpkg.com/intl-tel-input/-/intl-tel-input-12.1.15.tgz#7393e6b77572731bbc65ca4585782e8ba3d74de4"
-  integrity sha512-9TN9x6aGdO1eL6iGFpobuLU4UymZqjSnS9UnsOSi//LU3A8nkLOcokSYBYjak18Uu8OM59HsGYDd1jKmwRsskw==
+intl-tel-input@16.0.8:
+  version "16.0.8"
+  resolved "https://registry.yarnpkg.com/intl-tel-input/-/intl-tel-input-16.0.8.tgz#b723a10774e5c09a450a4ffef205a722b058a0fc"
+  integrity sha512-/6psSwgqI9WvbeBr6d9Ac8tcprboPJovk6qqLuSmAxQzzGaGmk4D/lwWeYpesW75DfWRnooMvM1L8YKK72U4mw==
 
 into-stream@^3.1.0:
   version "3.1.0"
