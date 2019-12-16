@@ -50,7 +50,7 @@
     "blueimp-load-image": "2.18.0",
     "bunyan": "1.8.12",
     "classnames": "2.2.5",
-    "config": "1.28.1",
+    "config": "3.2.4",
     "electron-editor-context-menu": "1.1.1",
     "electron-is-dev": "0.3.0",
     "electron-updater": "2.21.10",
