@@ -166,6 +166,13 @@
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-5.5.0.tgz#146c2a29ee7d3bae4bf2fcb274636e264c813c45"
   integrity sha512-41qEJgBH/TWgo5NFSvBCJ1qkoi3Q6ONSF2avrHq1LVEZfYpdHmj0y9SuTK+u9ZhG1sYQKBL1AWXKyLWP4RaUoQ==
 
+"@types/semver@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.1.0.tgz#c8c630d4c18cd326beff77404887596f96408408"
+  integrity sha512-pOKLaubrAEMUItGNpgwl0HMFPrSAFic8oSVIvfu1UwcgGNmNyK9gyhBHKmBnUTwwVvpZfkzUC0GaMgnL6P86uA==
+  dependencies:
+    "@types/node" "*"
+
 "@types/sinon@4.3.1":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-4.3.1.tgz#32458f9b166cd44c23844eee4937814276f35199"
@@ -1088,13 +1095,21 @@ buffers@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/buffers/-/buffers-0.1.1.tgz#b24579c3bed4d6d396aeee6d9a8ae7f5482ab7bb"
 
-builder-util-runtime@4.2.1, builder-util-runtime@^4.2.1, builder-util-runtime@~4.2.1:
+builder-util-runtime@4.2.1, builder-util-runtime@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/builder-util-runtime/-/builder-util-runtime-4.2.1.tgz#0caa358f1331d70680010141ca591952b69b35bc"
   dependencies:
     bluebird-lst "^1.0.5"
     debug "^3.1.0"
     fs-extra-p "^4.6.0"
+    sax "^1.2.4"
+
+builder-util-runtime@8.6.0:
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/builder-util-runtime/-/builder-util-runtime-8.6.0.tgz#b7007c30126da9a90e99932128d2922c8c178649"
+  integrity sha512-WTDhTUVrm7zkFyd6Qn7AXgmWifjpZ/fYnEdV3XCOIDMNNb/KPddBTbQ8bUlxxVeuOYlhGpcLUypG+4USdGL1ww==
+  dependencies:
+    debug "^4.1.1"
     sax "^1.2.4"
 
 builder-util@5.8.1, builder-util@^5.8.1:
@@ -2046,6 +2061,13 @@ debug@^3.0.0:
   dependencies:
     ms "2.0.0"
 
+debug@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
+  integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
+  dependencies:
+    ms "^2.1.1"
+
 debug@~2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
@@ -2479,7 +2501,7 @@ electron-icon-maker@0.0.3:
     icon-gen "^1.0.7"
     jimp "^0.2.27"
 
-electron-is-dev@0.3.0, electron-is-dev@^0.3.0:
+electron-is-dev@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-0.3.0.tgz#14e6fda5c68e9e4ecbeff9ccf037cbd7c05c5afe"
   integrity sha1-FOb9pcaOnk7L7/nM8DfL18BcWv4=
@@ -2511,20 +2533,19 @@ electron-to-chromium@^1.2.7:
   version "1.3.41"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.41.tgz#7e33643e00cd85edfd17e04194f6d00e73737235"
 
-electron-updater@2.21.10:
-  version "2.21.10"
-  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-2.21.10.tgz#aa66757ebf966f4247f247a8433af45cfe8e93b0"
-  integrity sha512-9QNUGHqwddLFIsFiAoFSxu0NdmvB1VGKrH2dGCn/b8nDwfWwHUyCnetMsnwcVSMjHA2Lz4tGfRSDSN3PtlVDKA==
+electron-updater@4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-4.2.2.tgz#57e106bffad16f71b1ffa3968a52a1b71c8147e6"
+  integrity sha512-e/OZhr5tLW0GcgmpR5wD0ImxgKMa8pPoNWRcwRyMzTL9pGej7+ORp0t9DtI5ZBHUbObIoEbrk+6EDGUGtJf+aA==
   dependencies:
-    bluebird-lst "^1.0.5"
-    builder-util-runtime "~4.2.1"
-    electron-is-dev "^0.3.0"
-    fs-extra-p "^4.6.0"
-    js-yaml "^3.11.0"
-    lazy-val "^1.0.3"
+    "@types/semver" "^7.1.0"
+    builder-util-runtime "8.6.0"
+    fs-extra "^8.1.0"
+    js-yaml "^3.13.1"
+    lazy-val "^1.0.4"
     lodash.isequal "^4.5.0"
-    semver "^5.5.0"
-    source-map-support "^0.5.5"
+    pako "^1.0.11"
+    semver "^7.1.3"
 
 electron@3.0.9:
   version "3.0.9"
@@ -3359,6 +3380,15 @@ fs-extra@^6.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
+  integrity sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
@@ -3702,6 +3732,11 @@ got@^6.7.1:
 graceful-fs@^4.1.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
+
+graceful-fs@^4.2.0:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
+  integrity sha512-a30VEBm4PEdx1dRB7MFK7BejejvCvBronbLjht+sHuGYj8PHs7M/5Z+rt5lw551vZ7yfTCj4Vuyy3mSJytDWRQ==
 
 "graceful-readlink@>= 1.0.0":
   version "1.0.1"
@@ -4767,6 +4802,14 @@ js-yaml@^3.11.0, js-yaml@^3.7.0:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js-yaml@^3.13.1:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
+  integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
 js-yaml@^3.2.7, js-yaml@^3.9.1:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
@@ -4966,6 +5009,11 @@ lazy-cache@^1.0.3:
 lazy-val@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/lazy-val/-/lazy-val-1.0.3.tgz#bb97b200ef00801d94c317e29dc6ed39e31c5edc"
+
+lazy-val@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/lazy-val/-/lazy-val-1.0.4.tgz#882636a7245c2cfe6e0a4e3ba6c5d68a137e5c65"
+  integrity sha512-u93kb2fPbIrfzBuLjZE+w+fJbUUMhNDXxNmMfaqNgpfQf1CO5ZSe2LfsnBqVAk7i/2NF48OSoRj+Xe2VT+lE8Q==
 
 lazystream@^1.0.0:
   version "1.0.0"
@@ -5588,6 +5636,11 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
+ms@^2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+
 multicast-dns-service-types@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz#899f11d9686e5e05cb91b35d5f0e63b773cfc901"
@@ -6182,6 +6235,11 @@ package-json@^4.0.0:
     registry-auth-token "^3.0.1"
     registry-url "^3.0.3"
     semver "^5.1.0"
+
+pako@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
+  integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
 
 pako@~1.0.5:
   version "1.0.6"
@@ -7800,6 +7858,11 @@ semver-diff@^2.0.0:
 semver@^5.0.1, semver@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.5.0.tgz#dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab"
+
+semver@^7.1.3:
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.3.tgz#e4345ce73071c53f336445cfc19efb1c311df2a6"
+  integrity sha512-ekM0zfiA9SCBlsKa2X1hxyxiI4L3B6EbVJkkdgQXnSEEaHlGdvyodMruTiulSRWMMB4NeIuYNMC9rTKTz97GxA==
 
 semver@~5.3.0:
   version "5.3.0"
