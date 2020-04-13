@@ -66,7 +66,7 @@
     "google-libphonenumber": "3.0.7",
     "got": "8.2.0",
     "intl-tel-input": "12.1.15",
-    "jquery": "3.3.1",
+    "jquery": "3.5.0",
     "linkify-it": "2.0.3",
     "lodash": "4.17.11",
     "mkdirp": "0.5.1",
