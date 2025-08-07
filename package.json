@@ -87,7 +87,7 @@
     "semver": "5.4.1",
     "spellchecker": "3.4.4",
     "testcheck": "1.0.0-rc.2",
-    "tmp": "0.0.33",
+    "tmp": "0.2.4",
     "to-arraybuffer": "1.0.1",
     "underscore": "1.9.0",
     "uuid": "3.3.2",
